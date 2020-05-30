@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <title>jQuery sidebar menu with show/hide menu onClick</title>
+  <title>ifram</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
  
   <!-- Latest compiled and minified CSS -->
@@ -71,13 +71,13 @@
     color: #fff;
     background: none;
 }
-
+/*
 #menu-toggle {
     z-index: 1;
     position: fixed;
     top: 0;
     right: 0;
-}
+}*/
 
 #sidebar-wrapper.active {
     right: 250px;
@@ -93,12 +93,26 @@
     margin: 5px 5px 0 0;
 }
 .square { 
-  padding: 8px; display: block; margin:12px; 
+  padding: 8px; display: inline-block; margin:2px; 
 }
 .wl a {
  color: #91a9cf; 
 }
+        .topright {
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+		
+		
+		html, body {
+  height: 100%;
+  overflow:hidden;
+}
 
+.full-height {
+  height: 100%;
+}
 </style>
 
 <script>
@@ -113,9 +127,12 @@
 </script>
   </head>
  <body>
+ <div class="topright">
+<a id="h" href="#" class="toggle square"><i class="fa fa-expand fa-lg" aria-hidden="true"></i></a>
+<a id="menu-toggle" href="#" class="toggle square"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></a>
 
+</div>
 <div class="wl">
- <a id="menu-toggle" href="#" class="toggle square"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></a>
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <a id="close-menu" href="#" class="pull-right toggle square"><i class="fa fa-times fa-lg"></i></a>
@@ -137,9 +154,13 @@
         </ul>
     </div>
 </div>
-     <div class="container">
+<div class="full-height" style="width:100%">
+<iframe class="full-height" src="topright.html" name="ifr12" frameborder="0" style="width:100%">This is not</iframe>
+</div>
+<!--      <div class="container-fluid">
          
-            <div class="page-header">
+ 
+         <div class="page-header">
 
               <h2>jQuery sidebar menu with show/hide menu onClick DEMO</h2>
 
@@ -160,7 +181,7 @@
 
               </div>
 
-     </div>
+     </div>-->
 
 <script src="js/jquery-1.10.2.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
