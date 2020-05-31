@@ -1,4 +1,4 @@
-echo@off
+@echo off
 git add .
 git status
 git commit -m "adding files"
